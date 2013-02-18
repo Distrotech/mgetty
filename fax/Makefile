@@ -53,20 +53,20 @@ install: all
 # programs / scripts
 #
 	-for i in $(FAX_SCRIPTS); do \
-		mv -f $(BINDIR)/$$i $(BINDIR)/$$i.old 2>/dev/null ; \
-		$(INSTALL) -m 755 $$i $(BINDIR) ; \
+		mv -f $(DESTDIR)$(BINDIR)/$$i $(DESTDIR)$(BINDIR)/$$i.old 2>/dev/null ; \
+		$(INSTALL) -m 755 $$i $(DESTDIR)$(BINDIR) ; \
 	done
-	$(INSTALL) -m 755 faxrunqd $(SBINDIR)
-	$(INSTALL) faxq-helper $(LIBDIR)
-	chown $(FAX_OUT_USER) $(LIBDIR)/faxq-helper
-	chmod 4711 $(LIBDIR)/faxq-helper
+	$(INSTALL) -m 755 faxrunqd $(DESTDIR)$(SBINDIR)
+	$(INSTALL) faxq-helper $(DESTDIR)$(LIBDIR)
+	chown $(FAX_OUT_USER) $(DESTDIR)$(LIBDIR)/faxq-helper
+	chmod 4711 $(DESTDIR)$(LIBDIR)/faxq-helper
 #
 # data files
 #
-	$(INSTALL) -m 644 cour25.pbm $(LIBDIR)
-	$(INSTALL) -m 644 cour25n.pbm $(LIBDIR)
+	$(INSTALL) -m 644 cour25.pbm $(DESTDIR)$(LIBDIR)
+	$(INSTALL) -m 644 cour25n.pbm $(DESTDIR)$(LIBDIR)
 	-test -f $(CONFDIR)/faxheader || \
-		$(INSTALL) -m 644 faxheader $(CONFDIR)
+		$(INSTALL) -m 644 faxheader $(DESTDIR)$(CONFDIR)
 #
 # /etc/magic
 #
@@ -79,4 +79,4 @@ install: all
 #
 # faxspool.rules sample file
 #
-	$(INSTALL) -m 644 faxspool.rules $(CONFDIR)/faxspool.rules.sample
+	$(INSTALL) -m 644 faxspool.rules $(DESTDIR)$(CONFDIR)/faxspool.rules.sample

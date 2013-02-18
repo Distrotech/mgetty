@@ -179,7 +179,7 @@ INSTALL=install -c -o bin -g bin
 #
 # prefix, where most (all?) of the stuff lives, usually /usr/local or /usr
 #
-prefix=/usr/local
+prefix=/usr
 #
 # prefix for all the spool directories (usually /usr/spool or /var/spool)
 #
@@ -199,7 +199,7 @@ LIBDIR=$(prefix)/lib/mgetty+sendfax
 #
 # where the configuration files (*.config, aliases, fax.allow/deny) go to
 #
-CONFDIR=$(prefix)/etc/mgetty+sendfax
+CONFDIR=/etc/mgetty+sendfax
 #CONFDIR=/etc/default/
 #
 #
@@ -227,20 +227,20 @@ FAX_OUT_USER=fax
 #
 #
 # Where section 1 manual pages should be placed
-MAN1DIR=$(prefix)/man/man1
+MAN1DIR=$(prefix)/share/man/man1
 #
 # Where section 4 manual pages (mgettydefs.4) should be placed
-MAN4DIR=$(prefix)/man/man4
+MAN4DIR=$(prefix)/share/man/man4
 #
 # Section 5 man pages (faxqueue.5)
-MAN5DIR=$(prefix)/man/man5
+MAN5DIR=$(prefix)/share/man/man5
 #
 # Section 8 man pages (sendfax.8)
-MAN8DIR=$(prefix)/man/man8
+MAN8DIR=$(prefix)/share/man/man8
 #
 # Where the GNU Info-Files are located
 #
-INFODIR=$(prefix)/info
+INFODIR=$(prefix)/share/info
 #
 #
 # A shell that understands bourne-shell syntax
@@ -592,37 +592,37 @@ install.bin: mgetty sendfax newslock \
 #
 # binaries
 #
-	-test -d $(BINDIR)  || ( ./mkidirs $(BINDIR)  ; chmod 755 $(BINDIR)  )
-	$(INSTALL) -m 755 newslock $(BINDIR)
+	-test -d $(DESTDIR)$(BINDIR)  || ( ./mkidirs $(DESTDIR)$(BINDIR)  ; chmod 755 $(DESTDIR)$(BINDIR)  )
+	$(INSTALL) -m 755 newslock $(DESTDIR)$(BINDIR)
 
-	-test -d $(SBINDIR) || ( ./mkidirs $(SBINDIR) ; chmod 755 $(SBINDIR) )
-	if [ -f $(SBINDIR)/mgetty ] ; then \
-		mv -f $(SBINDIR)/mgetty $(SBINDIR)/mgetty.old ; fi
-	if [ -f $(SBINDIR)/sendfax ] ; then \
-		mv -f $(SBINDIR)/sendfax $(SBINDIR)/sendfax.old ; fi
-	$(INSTALL) -s -m 700 mgetty $(SBINDIR)
-	$(INSTALL) -s -m 755 sendfax $(SBINDIR)
+	-test -d $(DESTDIR)$(SBINDIR) || ( ./mkidirs $(DESTDIR)$(SBINDIR) ; chmod 755 $(DESTDIR)$(SBINDIR) )
+	if [ -f $(DESTDIR)$(SBINDIR)/mgetty ] ; then \
+		mv -f $(DESTDIR)$(SBINDIR)/mgetty $(DESTDIR)$(SBINDIR)/mgetty.old ; fi
+	if [ -f $(DESTDIR)$(SBINDIR)/sendfax ] ; then \
+		mv -f $(DESTDIR)$(SBINDIR)/sendfax $(DESTDIR)$(SBINDIR)/sendfax.old ; fi
+	$(INSTALL) -s -m 700 mgetty $(DESTDIR)$(SBINDIR)
+	$(INSTALL) -s -m 755 sendfax $(DESTDIR)$(SBINDIR)
 #
 # data files + directories
 #
-	test -d $(LIBDIR)  || \
-		( ./mkidirs $(LIBDIR) &&  chmod 755 $(LIBDIR) )
-	test -d $(CONFDIR) || \
-		( ./mkidirs $(CONFDIR) && chmod 755 $(CONFDIR))
-	test -f $(CONFDIR)/login.config || \
-		$(INSTALL) -o root -m 600 login.config $(CONFDIR)/
+	test -d $(DESTDIR)$(LIBDIR)  || \
+		( ./mkidirs $(DESTDIR)$(LIBDIR) &&  chmod 755 $(DESTDIR)$(LIBDIR) )
+	test -d $(DESTDIR)$(CONFDIR) || \
+		( ./mkidirs $(DESTDIR)$(CONFDIR) && chmod 755 $(DESTDIR)$(CONFDIR))
+	test -f $(DESTDIR)$(CONFDIR)/login.config || \
+		$(INSTALL) -o root -m 600 login.config $(DESTDIR)$(CONFDIR)/
 	test -f $(CONFDIR)/mgetty.config || \
-		$(INSTALL) -o root -m 600 mgetty.config $(CONFDIR)/
+		$(INSTALL) -o root -m 600 mgetty.config $(DESTDIR)$(CONFDIR)/
 	test -f $(CONFDIR)/sendfax.config || \
-		$(INSTALL) -o root -m 644 sendfax.config $(CONFDIR)/
+		$(INSTALL) -o root -m 644 sendfax.config $(DESTDIR)$(CONFDIR)/
 	test -f $(CONFDIR)/dialin.config || \
-		$(INSTALL) -o root -m 600 dialin.config $(CONFDIR)/
+		$(INSTALL) -o root -m 600 dialin.config $(DESTDIR)$(CONFDIR)/
 	test -f $(CONFDIR)/faxrunq.config || \
-		$(INSTALL) -o root -m 644 faxrunq.config $(CONFDIR)/
+		$(INSTALL) -o root -m 644 faxrunq.config $(DESTDIR)$(CONFDIR)/
 #
 # test for outdated stuff
 #
-	-@if test -f $(LIBDIR)/mgetty.login ; \
+	-@if test -f $(DESTDIR)$(LIBDIR)/mgetty.login ; \
 	then \
 	    echo "WARNING: the format of $(LIBDIR)/mgetty.login has " ;\
 	    echo "been changed. Because of this, to avoid confusions, it's called " ;\
@@ -632,18 +632,18 @@ install.bin: mgetty sendfax newslock \
 #
 # fax spool directories
 #
-	test -d $(spool) || \
-		( mkdir $(spool) && chmod 755 $(spool) )
-	test -d $(FAX_SPOOL) || \
-		( mkdir $(FAX_SPOOL) && \
-		  chown $(FAX_OUT_USER) $(FAX_SPOOL) && \
-		  chmod 755 $(FAX_SPOOL) )
-	test -d $(FAX_SPOOL_IN) || \
-		( mkdir $(FAX_SPOOL_IN) && chmod 755 $(FAX_SPOOL_IN) )
-	test -d $(FAX_SPOOL_OUT) || \
-		  mkdir $(FAX_SPOOL_OUT)
-	chown $(FAX_OUT_USER) $(FAX_SPOOL_OUT)
-	chmod 755 $(FAX_SPOOL_OUT)
+	test -d $(DESTDIR)$(spool) || \
+		( mkdir -p $(DESTDIR)$(spool) && chmod 755 $(DESTDIR)$(spool) )
+	test -d $(DESTDIR)$(FAX_SPOOL) || \
+		( mkdir -p $(DESTDIR)$(FAX_SPOOL) && \
+		  chown $(FAX_OUT_USER) $(DESTDIR)$(FAX_SPOOL) && \
+		  chmod 755 $(DESTDIR)$(FAX_SPOOL) )
+	test -d $(DESTDIR)$(FAX_SPOOL_IN) || \
+		( mkdir -p $(DESTDIR)$(FAX_SPOOL_IN) && chmod 755 $(DESTDIR)$(FAX_SPOOL_IN) )
+	test -d $(DESTDIR)$(FAX_SPOOL_OUT) || \
+		  mkdir -p $(DESTDIR)$(FAX_SPOOL_OUT)
+	chown $(FAX_OUT_USER) $(DESTDIR)$(FAX_SPOOL_OUT)
+	chmod 755 $(DESTDIR)$(FAX_SPOOL_OUT)
 #
 # g3 tool programs
 #
@@ -663,7 +663,7 @@ install.bin: mgetty sendfax newslock \
 	if [ ! -z "$(INSTALL_MECHO)" ] ; then \
 	    cd compat ; \
 	    $(CC) $(CFLAGS) -o mg.echo mg.echo.c && \
-	    $(INSTALL) -s -m 755 mg.echo $(BINDIR) ; \
+	    $(INSTALL) -s -m 755 mg.echo $(DESTDIR)$(BINDIR) ; \
 	fi
 
 #

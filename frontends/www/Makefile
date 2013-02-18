@@ -74,31 +74,31 @@ install: all
 	cd ../.. ; $(MAKE) install.www
 
 install.www:
-	test -d $(CGIBINDIR) || \
-		mkdir -p $(CGIBINDIR)
-	test -d $(IMAGEDIR) || \
-		mkdir -p $(IMAGEDIR)
-	test -d $(HTMLDIR) || \
-		mkdir -p $(HTMLDIR)
+	test -d $(DESTDIR)$(CGIBINDIR) || \
+		mkdir -p $(DESTDIR)$(CGIBINDIR)
+	test -d $(DESTDIR)$(IMAGEDIR) || \
+		mkdir -p $(DESTDIR)$(IMAGEDIR)
+	test -d $(DESTDIR)$(HTMLDIR) || \
+		mkdir -p $(DESTDIR)$(HTMLDIR)
 	-@for i in $(CGI); do \
 		echo "$$i -> $(CGIBINDIR)..." ; \
-		mv -f $(CGIBINDIR)/$$i $(CGIBINDIR)/$$i.old 2>/dev/null ; \
-		$(INSTALL) -m 755 $$i $(CGIBINDIR) ; \
+		mv -f $(DESTDIR)$(CGIBINDIR)/$$i $(DESTDIR)$(CGIBINDIR)/$$i.old 2>/dev/null ; \
+		$(INSTALL) -m 755 $$i $(DESTDIR)$(CGIBINDIR) ; \
 	done
 	-@for i in $(IMAGES); do \
 		echo "$$i -> $(IMAGEDIR)..." ; \
 		test -f $(IMAGEDIR)/$$i || \
-		    $(INSTALL) -m 644 $$i $(IMAGEDIR) ; \
+		    $(INSTALL) -m 644 $$i $(DESTDIR)$(IMAGEDIR) ; \
 	done 
 	test -z "$(HTMLDIR)" || \
 	    for i in $(HTML); do \
-		test -f $(HTMLDIR)/$$i || \
-		    $(INSTALL) -m 644 $$i $(HTMLDIR) ; \
+		test -f $(DESTDIR)$(HTMLDIR)/$$i || \
+		    $(INSTALL) -m 644 $$i $(DESTDIR)$(HTMLDIR) ; \
 	    done
 	test -f $(CONFDIR)/wwwgui.conf || \
-		$(INSTALL) -o root -m 644 wwwgui.conf $(CONFDIR)/
-	$(INSTALL) -m 755 simplequant.pl $(LIBDIR)/
-	$(INSTALL) -m 755 wwwsub.pl $(LIBDIR)/
+		$(INSTALL) -o root -m 644 wwwgui.conf $(DESTDIR)$(CONFDIR)/
+	$(INSTALL) -m 755 simplequant.pl $(DESTDIR)$(LIBDIR)/
+	$(INSTALL) -m 755 wwwsub.pl $(DESTDIR)$(LIBDIR)/
 
 # explicit dependencies
 

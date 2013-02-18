@@ -12,11 +12,11 @@ MAN4PAGES=mgettydefs.4
 MAN5PAGES=faxqueue.5
 MAN8PAGES=sendfax.8 mgetty.8 callback.8 faxrunqd.8 faxq-helper.8
 MANSRC=$(MAN1PAGES) $(MAN4PAGES) $(MAN5PAGES) $(MAN8PAGES)
-MAN1DIR=/usr/local/man/man1
-MAN4DIR=/usr/local/man/man4
-MAN5DIR=/usr/local/man/man5
-MAN8DIR=/usr/local/man/man8
-INFODIR=/usr/local/info
+MAN1DIR=/usr/share/man/man1
+MAN4DIR=/usr/share/man/man4
+MAN5DIR=/usr/share/man/man5
+MAN8DIR=/usr/share/man/man8
+INFODIR=/usr/share/info
 
 #
 # formatted man pages
@@ -63,25 +63,23 @@ clean:
 	      *.man *.[1-9] mgetty.texi
 
 install: $(MANSRC) mgetty.info
-	for D in `dirname $(MAN1DIR)` $(MAN1DIR) $(MAN4DIR) $(MAN5DIR) $(MAN8DIR) ; do \
-		if [ ! -d $$D ] ; then mkdir $$D || exit 1 ; fi ; \
-	done
+	$(INSTALL) -d $(DESTDIR)$(MAN1DIR) $(DESTDIR)$(MAN1DIR) $(DESTDIR)$(MAN4DIR) $(DESTDIR)$(MAN5DIR) $(DESTDIR)$(MAN8DIR)
 	for i in $(MAN1PAGES) ; do \
-		$(INSTALL) -m 644 $$i $(MAN1DIR) ; \
+		$(INSTALL) -m 644 $$i $(DESTDIR)$(MAN1DIR) ; \
 	done
 	for i in $(MAN4PAGES) ; do \
-		$(INSTALL) -m 644 $$i $(MAN4DIR) ; \
+		$(INSTALL) -m 644 $$i $(DESTDIR)$(MAN4DIR) ; \
 	done
 	for i in $(MAN5PAGES) ; do \
-		$(INSTALL) -m 644 $$i $(MAN5DIR) ; \
+		$(INSTALL) -m 644 $$i $(DESTDIR)$(MAN5DIR) ; \
 	done
 	for i in $(MAN8PAGES) ; do \
-		$(INSTALL) -m 644 $$i $(MAN8DIR) ; \
+		$(INSTALL) -m 644 $$i $(DESTDIR)$(MAN8DIR) ; \
 	done
 	if [ -f mgetty.info ] ; then\
-	    test -d $(INFODIR) || mkdir $(INFODIR) 2>/dev/null ; \
+	    $(INSTALL) -d $(DESTDIR)$(INFODIR) ; \
 	    for i in mgetty.info* ; do \
-		$(INSTALL) -m 644 $$i $(INFODIR) ; \
+		$(INSTALL) -m 644 $$i $(DESTDIR)$(INFODIR) ; \
 	    done ; \
 	else \
 	    echo "mgetty.info not made, skipping" ; \
