@@ -600,8 +600,8 @@ install.bin: mgetty sendfax newslock \
 		mv -f $(DESTDIR)$(SBINDIR)/mgetty $(DESTDIR)$(SBINDIR)/mgetty.old ; fi
 	if [ -f $(DESTDIR)$(SBINDIR)/sendfax ] ; then \
 		mv -f $(DESTDIR)$(SBINDIR)/sendfax $(DESTDIR)$(SBINDIR)/sendfax.old ; fi
-	$(INSTALL) -s -m 700 mgetty $(DESTDIR)$(SBINDIR)
-	$(INSTALL) -s -m 755 sendfax $(DESTDIR)$(SBINDIR)
+	$(INSTALL) -m 700 mgetty $(DESTDIR)$(SBINDIR)
+	$(INSTALL) -m 755 sendfax $(DESTDIR)$(SBINDIR)
 #
 # data files + directories
 #
@@ -663,7 +663,7 @@ install.bin: mgetty sendfax newslock \
 	if [ ! -z "$(INSTALL_MECHO)" ] ; then \
 	    cd compat ; \
 	    $(CC) $(CFLAGS) -o mg.echo mg.echo.c && \
-	    $(INSTALL) -s -m 755 mg.echo $(DESTDIR)$(BINDIR) ; \
+	    $(INSTALL) -m 755 mg.echo $(DESTDIR)$(BINDIR) ; \
 	fi
 
 #
