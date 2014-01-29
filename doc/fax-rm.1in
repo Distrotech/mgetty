@@ -1,15 +1,15 @@
-.TH faxrm 1 "23 Nov 02" "greenie" "mgetty+sendfax manual"
-.IX faxrm
+.TH fax-rm 1 "23 Nov 02" "greenie" "mgetty+sendfax manual"
+.IX fax-rm
 .SH NAME
-faxrm - remove fax jobs queued by faxspool(1)
+fax-rm - remove fax jobs queued by faxspool(1)
 .SH SYNOPSIS
-.B faxrm
+.B fax-rm
 .RB [ -i ]
 .RI [job-ids ...]
 .SH DESCRIPTION
 Remove job(s) from the fax queue set up by faxspool(1).
 
-.I faxrm 
+.I fax-rm 
 removes queued fax jobs.  Call with a list of job-IDs to remove specific
 jobs.  Call with no job IDs to be asked interactively about all jobs you own
 (if run by root, all jobs).  For job-id, use the strings returned by faxq(1)
@@ -21,27 +21,27 @@ root is permitted to remove another user's faxes.
 
 If the job is locked (most likely because sendfax(8) is active sending
 it),
-.I faxrm
+.I fax-rm
 doesn't attempt to remove it.  Instead, it prints a warning message on
 stderr and goes on to the next job.
 
 .SH EXAMPLES
 
-faxrm F000005 F000033
+fax-rm F000005 F000033
 
 .SH OPTIONS
 .TP
 .B -i
 (interactive mode) Tells
-.I faxrm
+.I fax-rm
 to ask for confirmation before removing the job (UNIMPLEMENTED).
 
 .SH BUGS
-.I faxrm
+.I fax-rm
 doesn't return diagnostic exit codes yet.
 
 .SH "SEE ALSO"
 faxrunq(1), faxrunq(8), faxspool(1), faxq(1), faxqueue(5)
 .SH AUTHOR
-.I faxrm
+.I fax-rm
 is Copyright (C) 1993-2002 by Gert Doering, <gert@greenie.muc.de>.

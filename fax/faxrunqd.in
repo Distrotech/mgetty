@@ -80,7 +80,7 @@ my $rcs_id='RCS: $Id: faxrunqd.in,v 1.81 2010/06/04 13:50:46 gert Exp $';
 #
 # Revision 1.68  2004/11/24 15:01:29  gert
 # Implement 'sendfax-tty-map' (run tty-specific sendfax binary)
-# add job ID to log file entry for "faxrm removed job"
+# add job ID to log file entry for "fax-rm removed job"
 #
 # Revision 1.67  2004/11/24 13:32:06  gert
 # implement update-call-program (status update callback)
@@ -587,7 +587,7 @@ while( 1 )
     {
 	print LOG "\tQ: $tty: " . scalar( @{$modem_queue{$tty}} ) . " jobs, queue length ${mq_length{$tty}} (+${mq_badness{$tty}}), in_use: ${tty_in_use{$tty}}\n"  if $opt_d;
 
-	# use "while", not "if", in case one of the jobs was faxrm'd...
+	# use "while", not "if", in case one of the jobs was fax-rm'd...
 	while( ! $tty_in_use{$tty} &&
 	        scalar( @{$modem_queue{$tty}}) > 0 )
 	{
@@ -1215,7 +1215,7 @@ sub send_job_from_queue
 	return;
     }
 
-    # check whether job has been removed (faxrm) in the meantime...
+    # check whether job has been removed (fax-rm) in the meantime...
     unless( -d "$job" && -f "$job/JOB" )
     {
 	print LOG "WARNING: job $job has disappeared from disk queue!\n";

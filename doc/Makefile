@@ -7,7 +7,7 @@ NROFF=nroff
 #
 #
 MAN1PAGES=g32pbm.1 g3cat.1 pbm2g3.1 sff2g3.1 fax.1 \
-	  faxspool.1 faxrunq.1 faxq.1 faxrm.1 coverpg.1
+	  faxspool.1 faxrunq.1 faxq.1 fax-rm.1 coverpg.1
 MAN4PAGES=mgettydefs.4
 MAN5PAGES=faxqueue.5
 MAN8PAGES=sendfax.8 mgetty.8 callback.8 faxrunqd.8 faxq-helper.8
@@ -99,7 +99,7 @@ doc-tar: ../mgetty0$(VS)doc.tar.gz
 fax.1: fax.1in ../sedscript
 faxq.1: faxq.1in ../sedscript
 faxqueue.5: faxqueue.5in ../sedscript
-faxrm.1: faxrm.1in ../sedscript
+fax-rm.1: fax-rm.1in ../sedscript
 faxrunq.1: faxrunq.1in ../sedscript
 faxspool.1: faxspool.1in ../sedscript
 coverpg.1: coverpg.1in ../sedscript

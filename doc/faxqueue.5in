@@ -10,7 +10,7 @@ The
 files in the subdirectories of the outgoing fax spool directory, 
 .I @FAX_SPOOL_OUT@
 build up a queue of faxes to be sent by faxrunq(1). They are created by
-faxspool(1), can be viewed with faxq(1), and be deleted by faxrm(1).
+faxspool(1), can be viewed with faxq(1), and be deleted by fax-rm(1).
 
 .SH FORMAT
 The format of the JOB file is as follows:
@@ -138,4 +138,4 @@ To re-queue this job, call
 -- this renames the JOB file back.
 
 .SH "SEE ALSO"
-faxrunq(1), faxspool(1), faxrm(1), faxq(1), faxrunqd(8)
+faxrunq(1), faxspool(1), fax-rm(1), faxq(1), faxrunqd(8)

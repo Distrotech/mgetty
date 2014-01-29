@@ -1,13 +1,13 @@
 #!@SHELL@
 #
-# faxrm <job ids>
+# fax-rm <job ids>
 #
 # remove faxes with job_id passed on the command line (if writable)
 #
 # There are still a lot rough edges - but it works, and should give you an
 # idea how to improve it
 #
-# SCCS: $Id: faxrm.in,v 4.6 2003/02/04 16:46:36 gert Exp $ Copyright (C) 1994 Gert Doering
+# SCCS: $Id: fax-rm.in,v 4.6 2003/02/04 16:46:36 gert Exp $ Copyright (C) 1994 Gert Doering
 
 FAX_SPOOL=@FAX_SPOOL@
 FAX_SPOOL_OUT=@FAX_SPOOL_OUT@
@@ -36,7 +36,7 @@ fi
 
 if [ $# -eq 0 ]
 then
-    echo "usage: faxrm [-i] job-id ..."
+    echo "usage: fax-rm [-i] job-id ..."
     exit 1
 fi
     

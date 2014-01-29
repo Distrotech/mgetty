@@ -3,7 +3,7 @@
 /* faxq-helper.c
  *
  * this is a suid helper process that is used for the unprivileged
- * fax queue client programs (faxspool, faxq, faxrm) to access the
+ * fax queue client programs (faxspool, faxq, fax-rm) to access the
  * /var/spool/fax/outgoing/... fax queue ($OUT).
  *
  * it is NOT suid "root" but suid "FAX_OUT_USER" (usually "fax") as

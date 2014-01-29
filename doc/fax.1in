@@ -9,7 +9,7 @@ fax \- fax sending and receiving with mgetty+sendfax
 .RI file
 ...
 
-.B faxrm
+.B fax-rm
 .RI job-id
 
 .B faxq
@@ -58,7 +58,7 @@ and places the jobs into the outgoing spool directory.
 .I faxq
 displays the current FAX work queue.
 
-.I faxrm
+.I fax-rm
 removes one or more jobs from the current fax work queue. You have to
 specify the job id (returned by faxq) on the command line.
 
@@ -86,7 +86,7 @@ is a helper program that is used by
 .I faxspool,
 .I faxq
 and
-.I faxrm
+.I fax-rm
 to access the fax spool directory (which is not world-writeable since
 mgetty version 1.1.29).
 
@@ -173,7 +173,7 @@ runtime configuration file for sendfax (optional).
 Look into the responding man pages.
 
 .SH "SEE ALSO"
-faxspool(1), faxq(1), faxrunq(1), faxrunqd(8), sendfax(8), faxrm(1), mgetty(8),
+faxspool(1), faxq(1), faxrunq(1), faxrunqd(8), sendfax(8), fax-rm(1), mgetty(8),
 pbm2g3(1), g32pbm(1), g3cat(1), faxqueue(5), mgettydefs(4), coverpg(1)
 
 mgetty.info

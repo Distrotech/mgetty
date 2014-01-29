@@ -1693,7 +1693,7 @@ Jobs that are just being sent are not shown (@code{faxq} doesn't see locked
 jobs)
 
 @item
-@code{faxrm} can be used to remove fax jobs from the queue. It is called
+@code{fax-rm} can be used to remove fax jobs from the queue. It is called
 with the job ids of the to-be-removed faxes as command line argument. The
 job ids are those that @code{faxq} returns.
 

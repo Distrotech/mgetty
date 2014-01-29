@@ -7,7 +7,7 @@
 CC=gcc
 CFLAGS=-O2 -I.. -Wall
 
-FAX_SCRIPTS=faxspool faxrunq faxq faxrm 
+FAX_SCRIPTS=faxspool faxrunq faxq fax-rm 
 
 zigzag: 
 	cd .. ; $(MAKE) subdirs
@@ -26,8 +26,8 @@ faxrunqd: faxrunqd.in ../sedscript
 faxq: faxq.in ../sedscript
 	../sedscript <faxq.in >faxq
 
-faxrm: faxrm.in ../sedscript
-	../sedscript <faxrm.in >faxrm
+fax-rm: fax-rm.in ../sedscript
+	../sedscript <fax-rm.in >fax-rm
 
 faxheader: faxheader.in ../sedscript
 	../sedscript <faxheader.in >faxheader

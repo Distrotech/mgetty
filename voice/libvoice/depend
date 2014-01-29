@@ -1,10 +1,3 @@
-analyze.o: analyze.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
 Cirrus_Logic.o: Cirrus_Logic.c ../include/voice.h \
  ../include/../../mgetty.h ../include/../../ugly.h \
  ../include/../../config.h ../include/../../policy.h \
@@ -12,20 +5,6 @@ Cirrus_Logic.o: Cirrus_Logic.c ../include/voice.h \
  ../include/bitsizes.h ../include/util.h ../include/config.h \
  ../include/default.h ../include/event.h ../include/hardware.h \
  ../include/header.h ../include/paths.h ../include/pvf.h ../include/wav.h
-close.o: close.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-command.o: command.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
 Compaq_VS.o: Compaq_VS.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
@@ -33,20 +12,6 @@ Compaq_VS.o: Compaq_VS.c ../include/voice.h ../include/../../mgetty.h \
  ../include/util.h ../include/config.h ../include/default.h \
  ../include/event.h ../include/hardware.h ../include/header.h \
  ../include/paths.h ../include/pvf.h ../include/wav.h
-detect.o: detect.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-device_mode_names.o: device_mode_names.c ../include/voice.h \
- ../include/../../mgetty.h ../include/../../ugly.h \
- ../include/../../config.h ../include/../../policy.h \
- ../include/../../tio.h ../include/../../fax_lib.h ../include/IS_101.h \
- ../include/bitsizes.h ../include/util.h ../include/config.h \
- ../include/default.h ../include/event.h ../include/hardware.h \
- ../include/header.h ../include/paths.h ../include/pvf.h ../include/wav.h
 Digi_RAS.o: Digi_RAS.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
@@ -76,34 +41,6 @@ Elsa.o: Elsa.c ../include/voice.h ../include/../../mgetty.h \
  ../include/event.h ../include/hardware.h ../include/header.h \
  ../include/paths.h ../include/pvf.h ../include/wav.h \
  ../include/V253modem.h ../include/../include/voice.h
-event.o: event.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-flush.o: flush.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-init.o: init.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-IS_101.o: IS_101.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
 ISDN4Linux.o: ISDN4Linux.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
@@ -112,14 +49,14 @@ ISDN4Linux.o: ISDN4Linux.c ../include/voice.h ../include/../../mgetty.h \
  ../include/event.h ../include/hardware.h ../include/header.h \
  ../include/paths.h ../include/pvf.h ../include/wav.h \
  ../include/V253modem.h ../include/../include/voice.h
-Lucent.o: Lucent.c ../include/voice.h ../include/../../mgetty.h \
+IS_101.o: IS_101.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
  ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
  ../include/util.h ../include/config.h ../include/default.h \
  ../include/event.h ../include/hardware.h ../include/header.h \
  ../include/paths.h ../include/pvf.h ../include/wav.h
-mode.o: mode.c ../include/voice.h ../include/../../mgetty.h \
+Lucent.o: Lucent.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
  ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
@@ -161,42 +98,7 @@ Multitech_5634ZPX_ISA.o: Multitech_5634ZPX_ISA.c ../include/voice.h \
  ../include/bitsizes.h ../include/util.h ../include/config.h \
  ../include/default.h ../include/event.h ../include/hardware.h \
  ../include/header.h ../include/paths.h ../include/pvf.h ../include/wav.h
-open.o: open.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-play.o: play.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-read.o: read.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-record.o: record.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
 Rockwell.o: Rockwell.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-shell.o: shell.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
  ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
@@ -210,7 +112,7 @@ Sierra.o: Sierra.c ../include/voice.h ../include/../../mgetty.h \
  ../include/util.h ../include/config.h ../include/default.h \
  ../include/event.h ../include/hardware.h ../include/header.h \
  ../include/paths.h ../include/pvf.h ../include/wav.h
-signal.o: signal.c ../include/voice.h ../include/../../mgetty.h \
+Supra.o: Supra.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
  ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
@@ -218,13 +120,6 @@ signal.o: signal.c ../include/voice.h ../include/../../mgetty.h \
  ../include/event.h ../include/hardware.h ../include/header.h \
  ../include/paths.h ../include/pvf.h ../include/wav.h
 Supra56ePRO.o: Supra56ePRO.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
-Supra.o: Supra.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
  ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
@@ -265,15 +160,6 @@ V253ugly.o: V253ugly.c ../include/V253modem.h \
  ../include/../include/event.h ../include/../include/hardware.h \
  ../include/../include/header.h ../include/../include/paths.h \
  ../include/../include/pvf.h ../include/../include/wav.h
-voice_fax.o: voice_fax.c ../../syslibs.h ../../mgetty.h ../../ugly.h \
- ../../tio.h ../../policy.h ../../fax_lib.h
-write.o: write.c ../include/voice.h ../include/../../mgetty.h \
- ../include/../../ugly.h ../include/../../config.h \
- ../include/../../policy.h ../include/../../tio.h \
- ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
- ../include/util.h ../include/config.h ../include/default.h \
- ../include/event.h ../include/hardware.h ../include/header.h \
- ../include/paths.h ../include/pvf.h ../include/wav.h
 ZyXEL_1496.o: ZyXEL_1496.c ../include/voice.h ../include/../../mgetty.h \
  ../include/../../ugly.h ../include/../../config.h \
  ../include/../../policy.h ../include/../../tio.h \
@@ -295,3 +181,117 @@ ZyXEL_Omni56K.o: ZyXEL_Omni56K.c ../include/voice.h \
  ../include/bitsizes.h ../include/util.h ../include/config.h \
  ../include/default.h ../include/event.h ../include/hardware.h \
  ../include/header.h ../include/paths.h ../include/pvf.h ../include/wav.h
+analyze.o: analyze.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+close.o: close.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+command.o: command.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+detect.o: detect.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+device_mode_names.o: device_mode_names.c ../include/voice.h \
+ ../include/../../mgetty.h ../include/../../ugly.h \
+ ../include/../../config.h ../include/../../policy.h \
+ ../include/../../tio.h ../include/../../fax_lib.h ../include/IS_101.h \
+ ../include/bitsizes.h ../include/util.h ../include/config.h \
+ ../include/default.h ../include/event.h ../include/hardware.h \
+ ../include/header.h ../include/paths.h ../include/pvf.h ../include/wav.h
+event.o: event.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+flush.o: flush.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+init.o: init.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+mode.o: mode.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+open.o: open.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+play.o: play.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+read.o: read.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+record.o: record.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+shell.o: shell.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+signal.o: signal.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h
+voice_fax.o: voice_fax.c ../../syslibs.h ../../mgetty.h ../../ugly.h \
+ ../../tio.h ../../policy.h ../../fax_lib.h
+write.o: write.c ../include/voice.h ../include/../../mgetty.h \
+ ../include/../../ugly.h ../include/../../config.h \
+ ../include/../../policy.h ../include/../../tio.h \
+ ../include/../../fax_lib.h ../include/IS_101.h ../include/bitsizes.h \
+ ../include/util.h ../include/config.h ../include/default.h \
+ ../include/event.h ../include/hardware.h ../include/header.h \
+ ../include/paths.h ../include/pvf.h ../include/wav.h

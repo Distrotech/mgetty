@@ -26,7 +26,7 @@ for very clearly defined purposes:
 
 and possibly:
 
- - remove a fax job from the queue (to be used by faxrm and in case of errors)
+ - remove a fax job from the queue (to be used by fax-rm and in case of errors)
 
  - re-queue a job that has been suspended due to repeated failures (faxq -r)
 
@@ -63,7 +63,7 @@ failure to process the specified command (it will print a detailed
 error message)
 
 .SH "SEE ALSO"
-faxspool(1), faxq(1), faxrm(1), faxqueue(5)
+faxspool(1), faxq(1), fax-rm(1), faxqueue(5)
 .SH AUTHOR
 .I faxq-helper
 is Copyright (C) 2004-2006 by Gert Doering, <gert@greenie.muc.de>. 
