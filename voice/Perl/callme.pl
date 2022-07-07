@@ -15,7 +15,7 @@ use Modem::Vgetty;
 my $v = new Modem::Vgetty;
 
 die "Usage: callme.pl number message.rmd" if $#ARGV != 1;
-$v->device('DIALUP_LINE')
+$v->device('DIALUP_LINE');
 $v->add_handler('BUSY_TONE', 'finish',
         sub { $v->stop; exit 0; });
 $v->enable_events;
